@@ -19,7 +19,7 @@ const setApp = (app) => {
     app.use(cors({origin:"http://localhost:3000", credentials: true}));
     app.use(express.json());
     
-    app.use(session({    
+    app.use(session({      
         store: DBSessionsStore,
         secret: 'secret12021407', 
         resave: true, 

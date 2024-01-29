@@ -15,10 +15,11 @@ const setApp = (app) => {
     app.use(express.static(path.resolve(__dirname,"../public/avatars")));
     app.use(express.static(path.resolve(__dirname,"../public/styles")));
     app.use(express.static(path.resolve(__dirname,"../public")));
+    app.use(express.static(path.resolve(__dirname,"../public")));
     app.use(cors({origin:"http://localhost:3000", credentials: true}));
     app.use(express.json());
     
-    app.use(session({ 
+    app.use(session({  
         store: DBSessionsStore,
         secret: 'secret12021407', 
         resave: true, 
